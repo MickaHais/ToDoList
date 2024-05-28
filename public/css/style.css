@@ -1,0 +1,150 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+    animation: slideIn 1s ease-out;
+}
+
+.item-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-form input[type="text"]:focus {
+    border-color: #5bc0de;
+    box-shadow: 0 0 5px rgba(91, 192, 222, 0.5);
+    outline: none;
+}
+
+.item-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #5bc0de;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.item-form button:hover {
+    background-color: #31b0d5;
+    transform: scale(1.05);
+}
+
+.item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item-text {
+    flex: 1;
+    margin-left: 10px;
+    color: #555;
+}
+
+.delete-form {
+    display: flex;
+    align-items: center;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-btn:hover {
+    color: #c82333;
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
